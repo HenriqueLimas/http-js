@@ -1,0 +1,16 @@
+{
+  "name": "http-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "$(npm bin)/eslint ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^2.2.0",
+    "eslint-config-google": "^0.4.0",
+    "eslint-config-xo": "^0.11.0"
+  }
+}
