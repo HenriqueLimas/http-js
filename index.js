@@ -33,7 +33,7 @@
  * @return {Object}        Object with 4 HTTP methods
  */
 function http(url, config) {
-  var client = _createClient();
+  var client = config.client || _createClient();
 
   config = config || {};
   client.withCredentials = config.withCredentials;
