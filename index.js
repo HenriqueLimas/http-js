@@ -33,9 +33,11 @@
  * @return {Object}        Object with 4 HTTP methods
  */
 function http(url, config) {
-  var client = config.client || _createClient();
+  var client;
 
   config = config || {};
+  
+  client = config.client || _createClient();
   client.withCredentials = config.withCredentials;
 
   var promise = new Promise(function(resolve, reject) {
