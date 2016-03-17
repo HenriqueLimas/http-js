@@ -156,10 +156,11 @@ function http(url, config) {
     var headers = params.headers;
     var data = params.data || null;
     var promise = params.promise;
-
+    
+    client.open(method.toUpperCase(), url, true);
+    
     _setHeaders(client, headers);
 
-    client.open(method.toUpperCase(), url, true);
     client.send(JSON.stringify(data));
 
     return _createReturnedPromise(promise, client);
